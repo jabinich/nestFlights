@@ -46,7 +46,8 @@ export class FlightsController {
     }
 
     // DELETE
-    @Post("/:id/delete")
+    //@Post("/:id/delete")
+    @Delete("/:id")
     async delete(@Param('id') id): Promise<any> {
         return this.flightsService.delete(id);
     }
